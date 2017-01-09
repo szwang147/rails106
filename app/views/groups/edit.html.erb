@@ -2,7 +2,13 @@
   <h2>edit the groups</h2>
   <hr>
   <%= form_for @group do |f| %>
-
+  <% if @group.errors.any? %>
+  <ul>
+    <% @group.errors.full_message.each do |msg| %>
+    <li> <%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
   title
   <br>
   <%= f.text_field :title %>
