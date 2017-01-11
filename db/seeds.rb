@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+put: "1@1, 5groups"
+
+create_account User.create(email:"1@1", password:'123123')
+
+create_jos = for i in 1..5 do
+Group.create(title:"group no.#{i}", description:"sth for group no.#{i}")
+end
