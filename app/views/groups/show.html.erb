@@ -7,4 +7,24 @@
 </div>
 <h2> <%= @group.title %></h2>
 <p><%= @group.description %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>post content</th>
+      <th>creator</th>
+      <th>create time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @post.each do |post| %>
+    <tr>
+      <td><%= post.content %></td>
+      <td><%= post.user.email %></td>
+      <td><%= post.created_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
 </div>

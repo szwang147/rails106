@@ -79,7 +79,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path
     else
-      render :edit
+      render :new
   end
 end
 
@@ -126,7 +126,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path
     else
-      render :edit
+      render :new
   end
 
   def update
