@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-put: "1@1, 5groups"
+puts"1@1, 5groups"
 
-create_account User.create(email:"1@1", password:'123123')
+create_account = User.create(email:"1@1", password:'123123')
 
 create_jos = for i in 1..5 do
-Group.create(title:"group no.#{i}", description:"sth for group no.#{i}")
+Group.create(title:"group no.#{i}", description:"sth for group no.#{i}", user_id:"1")
 end
